@@ -3,11 +3,12 @@ let submituser = document.getElementById("subscription-form");
 
 let datausers = [
     {
-    name:"YourName",
-    lastname:"YourLastname",
-    email:"YourEmail@dominio.es"
+    Brand:"Ford",
+    Model:"Ford Fiesta 2021",
+    Color:"Red and black",
     },
 ]
+
 
 
 let createusers = () => {
@@ -27,11 +28,14 @@ let createusers = () => {
 
         const createnames = document.createElement("input");
         const createEmail = document.createElement("input");
-        createnames.value = `${user.name} ${user.lastname}`;
-        createEmail.value = `${user.email}`;
+        const createColor = document.createElement("input");
+        createnames.value = `${user.Brand}`;
+        createColor.value = `${user.Model}`
+        createEmail.value = `${user.Color}`;
 
 
         createItem.appendChild(createnames);
+        createItem.appendChild(createColor);
         createItem.appendChild(createEmail);
 
         const operButtons = document.createElement("div");
@@ -61,9 +65,9 @@ let newUser = event => {
     event.preventDefault();
 
     let user = {
-        name: document.getElementById("name").value,
-        lastname: document.getElementById("lastname").value,
-        email: document.getElementById("email").value,
+        Brand: document.getElementById("Brand").value,
+        Model: document.getElementById("Model").value,
+        Color: document.getElementById("Color").value,
     }
     userlist.push(user);
     createusers();
@@ -71,12 +75,11 @@ let newUser = event => {
 
 let editUser = (user, index) => {
 
-    document.getElementById("name").value = user.name;
-    document.getElementById("lastname").value = user.lastname;
-    document.getElementById("email").value = user.email;
+    document.getElementById("Brand").value = user.Brand;
+    document.getElementById("Model").value = user.Model;
+    document.getElementById("Color").value = user.Color;
    
     datausers.splice(index, 1);
-    createusers()
 
 }
 

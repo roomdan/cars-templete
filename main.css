@@ -242,7 +242,7 @@
 }
 
 .Item-table {
-    width: 70%;
+    width: 75%;
     display: flex;
     justify-content: space-between;
     color: grey;
@@ -250,7 +250,7 @@
 
 
 .Item-table input{
-    width: 50%;
+    width: 33%;
     margin: 0.35rem;
     padding: 0.5rem;
     display: flex;
@@ -263,7 +263,7 @@
 
 .oper-buttons {
 
-    width: 30%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: space-around;
