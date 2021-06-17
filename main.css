@@ -61,12 +61,15 @@
 }
 
 
-#clas-menu-add li:hover {
 
-    border: 1px solid rgb(0, 128, 255);
-    border-radius: 1rem;
-    
+
+.dark-button {
+
+    width: 5rem;
+    font-weight: 600;
+
 }
+
 
 #clas-menu-add li a:hover {
 

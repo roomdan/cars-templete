@@ -3,13 +3,19 @@ let submituser = document.getElementById("subscription-form");
 
 let datausers = [
     {
-    Brand:"Ford",
-    Model:"Ford Fiesta 2021",
-    Color:"Red and black",
+    Brand:"FORD",
+    Model:"FORD FIESTA 2021",
+    Color:"REN AND BLAK",
     },
 ]
 
 
+let createbrand;
+let createmodel;
+let createcolor;
+
+
+localStorage.setItem("dataAll", JSON.stringify(datausers));
 
 let createusers = () => {
 
@@ -26,17 +32,17 @@ let createusers = () => {
         createItem.setAttribute("class", "Item-table");
         createDiv.appendChild(createItem);
 
-        const createnames = document.createElement("input");
-        const createEmail = document.createElement("input");
-        const createColor = document.createElement("input");
-        createnames.value = `${user.Brand}`;
-        createColor.value = `${user.Model}`
-        createEmail.value = `${user.Color}`;
+        createbrand = document.createElement("input");
+        createmodel = document.createElement("input");
+        createcolor = document.createElement("input");
+        createbrand.value = `${user.Brand}`;
+        createmodel.value = `${user.Model}`
+        createcolor.value = `${user.Color}`;
 
 
-        createItem.appendChild(createnames);
-        createItem.appendChild(createColor);
-        createItem.appendChild(createEmail);
+        createItem.appendChild(createbrand);
+        createItem.appendChild(createmodel);
+        createItem.appendChild(createcolor);
 
         const operButtons = document.createElement("div");
         operButtons.setAttribute("class", "oper-buttons");
@@ -46,7 +52,7 @@ let createusers = () => {
         editButton.setAttribute("class", "button-edit");
         editButton.addEventListener("click", () => editUser(user, index))
         editButton.setAttribute("Id", "edit");
-        editButton.innerText = `Edit`;
+        editButton.innerText = `Save Changues`;
         operButtons.appendChild(editButton);
 
         const deleteButton = document.createElement("button");
@@ -58,31 +64,48 @@ let createusers = () => {
     });
 
 }
-createusers(datausers);
+
+createusers()
+
+
 
 let newUser = event => {
 
     event.preventDefault();
 
+   if  (document.getElementById("Brand").value === "" 
+    && document.getElementById("Model").value === ""
+    && document.getElementById("Color").value === "")
+
+{
+    document.getElementById("save-user-button").style.backgroundColor = "red";
+}
+
+else {
+
     let user = {
-        Brand: document.getElementById("Brand").value,
-        Model: document.getElementById("Model").value,
-        Color: document.getElementById("Color").value,
+        Brand: document.getElementById("Brand").value.toUpperCase(),
+        Model: document.getElementById("Model").value.toUpperCase(),
+        Color: document.getElementById("Color").value.toUpperCase(),
     }
-    userlist.push(user);
+    datausers.push(user);
     createusers();
+
+    document.getElementById("save-user-button").style.backgroundColor = "rgb(86, 190, 86)";
+
 }
 
-let editUser = (user, index) => {
+}
 
-    document.getElementById("Brand").value = user.Brand;
-    document.getElementById("Model").value = user.Model;
-    document.getElementById("Color").value = user.Color;
+let editUser = (user) => {
+
+    user.Brand = createbrand.value.toUpperCase();
+    user.Model = createmodel.value.toUpperCase();
+    user.Color = createcolor.value.toUpperCase();
    
-    datausers.splice(index, 1);
+    createusers();
 
 }
-
 
 let deleteUser = (index) => {
 
