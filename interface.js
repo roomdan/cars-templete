@@ -52,7 +52,7 @@ let createusers = () => {
         editButton.setAttribute("class", "button-edit");
         editButton.addEventListener("click", () => editUser(user, index))
         editButton.setAttribute("Id", "edit");
-        editButton.innerText = `Save Changues`;
+        editButton.innerText = `Save Changes`;
         operButtons.appendChild(editButton);
 
         const deleteButton = document.createElement("button");
