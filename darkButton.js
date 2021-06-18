@@ -5,7 +5,7 @@ let buttonsColor = document.getElementById("buttons-bg");
 
 let DarkMode = () => {
 
-bodyCualities.style.backgroundColor = "rgb(226, 226, 226)";
+bodyCualities.style.backgroundColor = "rgb(200, 200, 150)";
 darkbtn.innerHTML = "";
 darkbtn.innerText = "Normal"
 

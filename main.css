@@ -8,9 +8,10 @@
     background-color: rgb(39, 39, 39);
 }
 
+
 .info-left-page {
 
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: flex-start;
     font-size: 1rem;
@@ -20,10 +21,10 @@
 }
 
 .info-left-page a {
-
+    width: 50%;
     font-size: 2rem;
-    padding: 0.66rem;
     color: rgb(255, 255, 255);
+
 
 }
 
@@ -39,17 +40,36 @@
 
 
 .menu-right-page {
-    width: 40%;
+    width: 50%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
 
 #clas-menu-add {
-    width: auto;
     display: flex;
     align-items: flex-end;
 }
+
+
+
+@media screen and (max-width: 720px){
+
+    #clas-menu-add {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+ 
+    #clas-menu-add li{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+}
+
 
 #clas-menu-add li{
     width: auto;
@@ -125,9 +145,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+
+
+@media screen and (max-width: 720px){ 
+
+    .title-a-page-formal {
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-a-page-content h3{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        color: dodgerblue;
+        text-align: center;
+        font-weight: 600;
+    
+    }
 
 }
+
 
 .title-a-page-content {
     display: flex;
@@ -137,8 +182,31 @@
     margin: 3rem;
     font-size: 2rem;
     color: dodgerblue;
+    font-weight: 600;
+    text-align: center;
 
 }
+
+
+.button-show-form {
+
+
+    width: 40%;
+    background-color:rgb(42, 146, 250);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+
+
+#become-register {
+
+    display: none;
+}
+
+
 
 .form-input-work-users {
 
@@ -146,7 +214,53 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
+
+
+
+
+@media screen and (max-width: 720px){ 
+
+
+    .form-input-work-users {
+
+        width: 100%;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .secction-form-subscription {
+
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    #subscription-form {
+
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
 
 #subscription-form {
 
@@ -178,6 +292,31 @@
     border-radius: 0.5rem;
     font-size: 1rem;
 }
+
+@media screen and (max-width: 720px){ 
+    .field {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0.9rem;
+    }
+
+    .field input {
+
+        margin-top: 1rem;
+        width: 90%;
+        height: 2.4rem;
+        padding-left: 1rem;
+        background-color: rgb(226, 226, 226);
+        border-radius: 0.5rem;
+        font-size: 1rem;
+    }
+    
+
+
+}
+
 
 .secction-form-subscription {
 
@@ -219,9 +358,32 @@
     align-items: center;
 }
 
+
+@media screen and (max-width: 720px){
+
+    .users-saved-info {
+
+        width: 100%;
+        min-height: 20rem;
+        max-height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: rgb(226 226 226);
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+    }
+    
+
+}
+
+
 .users-saved-info {
 
-    width: 70%;
+    width: 90%;
     min-height: 20rem;
     max-height: auto;
     margin-top: 1rem;

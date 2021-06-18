@@ -14,9 +14,6 @@ let createbrand;
 let createmodel;
 let createcolor;
 
-
-localStorage.setItem("dataAll", JSON.stringify(datausers));
-
 let createusers = () => {
 
     usersAdd.innerHTML = "";
@@ -62,9 +59,7 @@ let createusers = () => {
         deleteButton.innerText = `Delete`;
         operButtons.appendChild(deleteButton);
     });
-
 }
-
 createusers()
 
 
@@ -74,24 +69,26 @@ let newUser = event => {
     event.preventDefault();
 
    if  (document.getElementById("Brand").value === "" 
-    && document.getElementById("Model").value === ""
-    && document.getElementById("Color").value === "")
+    || document.getElementById("Model").value === ""
+    || document.getElementById("Color").value === "")
 
 {
     document.getElementById("save-user-button").style.backgroundColor = "red";
+    document.getElementById("save-user-button").innerText = "Fill in the form";
 }
 
 else {
 
-    let user = {
+    let newCar = {
         Brand: document.getElementById("Brand").value.toUpperCase(),
         Model: document.getElementById("Model").value.toUpperCase(),
         Color: document.getElementById("Color").value.toUpperCase(),
     }
-    datausers.push(user);
+    userlist.push(newCar);
     createusers();
 
     document.getElementById("save-user-button").style.backgroundColor = "rgb(86, 190, 86)";
+    document.getElementById("save-user-button").innerText = "Saved Data";
 
 }
 
@@ -109,7 +106,7 @@ let editUser = (user) => {
 
 let deleteUser = (index) => {
 
-    datausers.splice(index, 1);
+    userlist.splice(index, 1);
     createusers()
 
 }
