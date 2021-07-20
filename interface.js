@@ -9,7 +9,6 @@ let datausers = [
     },
 ]
 
-
 let createbrand;
 let createmodel;
 let createcolor;

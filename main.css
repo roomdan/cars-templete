@@ -90,6 +90,12 @@
 
 }
 
+.ligth-button {
+    width: 5rem;
+    font-weight: 600;
+    display: none;
+}
+
 
 #clas-menu-add li a:hover {
 
@@ -125,7 +131,7 @@
     width: 100px;
     height: 100px;
     box-sizing: border-box;
-    box-shadow: 4px 4px 10px 0.5px rgb(231, 231, 231);
+    box-shadow: 4px 4px 10px 0.5px rgb(48, 48, 48);
     border-radius: 4rem;
     padding: 0.1rem;
 
