@@ -23,6 +23,7 @@ let LigthMode = () => {
     bodyCualities.style.backgroundColor = "White";
     darkbtn.style.display = 'flex';
     ligthBtn.style.display = 'none';
+    bodyCualities.style.color = 'black';
     header.style.backgroundColor= 'rgb(39 39 39)';
     buttonGeneralSubmit.style.backgroundColor = 'rgb(39 39 39)';
 }
